@@ -1,4 +1,3 @@
-social-widget-wrapper
-=====================
+# social-widget-wrapper
 
 @@
