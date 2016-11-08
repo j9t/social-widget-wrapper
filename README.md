@@ -14,4 +14,4 @@ You can see a live example of the script in action on [Code Responsibly][4].
 [1]: https://github.com/j9t/social-widget-wrapper/blob/master/social.html
 [2]: https://github.com/j9t/social-widget-wrapper/blob/master/social.combined.js
 [3]: http://www.addthis.com/
-[4]: http://coderesponsibly.org/
+[4]: https://coderesponsibly.org/
