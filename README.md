@@ -1,4 +1,4 @@
-# social-widget-wrapper
+# Social Widget Wrapper
 
 Script wrapper to keep Facebook, Twitter, Google+, other social scripts from contaminating (WETting) template files and documents.
 
