@@ -9,9 +9,12 @@ The idea is that production HTML only contains the most minimal markup in form o
 
 You can see a live example of the script in action on [Code Responsibly][4].
 
-⚠ Script and documentation are in need of review and TLC.
+---
+
+The script is currently unmaintained and needs TLC (as of November 8, 2016). [Contributions welcome.][5]
 
 [1]: https://github.com/j9t/social-widget-wrapper/blob/master/social.html
 [2]: https://github.com/j9t/social-widget-wrapper/blob/master/social.combined.js
-[3]: http://www.addthis.com/
+[3]: https://www.addthis.com/
 [4]: https://coderesponsibly.org/
+[5]: https://github.com/j9t/social-widget-wrapper/issues/new
