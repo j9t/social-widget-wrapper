@@ -2,7 +2,7 @@
 
 Script wrapper to keep Facebook, Twitter, Google+, other social scripts from contaminating (WETting) template files and documents.
 
-The idea is that production HTML only contains the most minimal markup in form of a “social” container (like `&lt;div id=social&gt;&lt;/div&gt;`), and everything else is piped in via script (found here). The resulting minimized repetition makes handling social scripts easier and more maintainable, for only the script needs updating later on.
+The idea is that production HTML only contains the most minimal markup in form of a “social” container (like `<div id=social></div>`), and everything else is piped in via script (found here). The resulting minimized repetition makes handling social scripts easier and more maintainable, for only the script needs updating later on.
 
 * [social.html][1] shows how the embedding works.
 * [social.combined.js][2] is perhaps the most straight-forward script at the moment, tested and found stable to work with [AddThis][3] code.
