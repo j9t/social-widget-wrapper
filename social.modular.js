@@ -2,20 +2,7 @@
  * Modular: rebuilding individual service code
  */
 
-// Event handler
-function addEvent(obj, type, fn) {
-	if (obj.addEventListener) {
-		obj.addEventListener(type, fn, false);
-	} else if (obj.attachEvent) {
-		obj['e'+type+fn] = fn;
-		obj[type+fn] = function() {
-			obj['e'+type+fn](window.event);
-		};
-		obj.attachEvent('on'+type, obj[type+fn]);
-	};
-};
-
-// Script manager
+// Script Manager
 function manageScript(url) {
 	var externalScript = document.createElement('script');
 	externalScript.setAttribute('src', url);
@@ -23,7 +10,7 @@ function manageScript(url) {
 	document.getElementsByTagName('body')[0].appendChild(externalScript);
 };
 
-// Container manager
+// Container Manager
 function createContainer(service, element, attributes, text) {
 	var containerMother = document.createElement('div');
 	containerMother.setAttribute('id', 'social-' + service);
@@ -33,11 +20,13 @@ function createContainer(service, element, attributes, text) {
 	};
 	container.textContent = text;
 	containerMother.appendChild(container);
-	document.getElementById('social').appendChild(containerMother);
+	if (document.getElementById('social')) {
+		document.getElementById('social').appendChild(containerMother);
+	};
 };
 
-// Configuration and service registry
-function initSocial() {
+// Configuration and Init
+(function() {
 
 	// Language codes, https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Partial_ISO_639_table?
 	var language = 'en';
@@ -77,11 +66,4 @@ function initSocial() {
 	createContainer('twitter', 'a', containerAttributes, 'Tweet');
 	manageScript('https://platform.twitter.com/widgets.js');
 
-};
-
-// Initialization
-function init() {
-	initSocial();
-};
-
-addEvent(window, 'load', init);
+}());

@@ -2,28 +2,17 @@
  * Individual: pushing individual services in via innerHTML
  */
 
-// Event handler
-function addEvent(obj, type, fn) {
-	if (obj.addEventListener) {
-		obj.addEventListener(type, fn, false);
-	} else if (obj.attachEvent) {
-		obj['e'+type+fn] = fn;
-		obj[type+fn] = function() {
-			obj['e'+type+fn](window.event);
-		};
-		obj.attachEvent('on'+type, obj[type+fn]);
-	};
-};
-
-// Social factory
+// Social Factory
 function shift(service, code) {
 	var container = document.createElement('div');
 	container.setAttribute('id', 'social-' + service);
-	document.getElementById('social').appendChild(container).innerHTML = code;
+	if (document.getElementById('social')) {
+		document.getElementById('social').appendChild(container).innerHTML = code;
+	};
 };
 
-// Social services
-function initSocial() {
+// Configuration and Init
+(function() {
 
 	// Language codes, https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#Partial_ISO_639_table?
 	var language = 'en';
@@ -39,11 +28,4 @@ function initSocial() {
 	// Twitter, https://dev.twitter.com/docs/tweet-button
 	shift('twitter', '<a href="https://twitter.com/share" class="twitter-share-button" data-url="' + document.location.href + '" data-via="j9t" data-lang="' + language + '" data-count="vertical">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>');
 
-};
-
-// Initialization
-function init() {
-	initSocial();
-};
-
-addEvent(window, 'load', init);
+}());
