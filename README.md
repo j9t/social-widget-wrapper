@@ -16,5 +16,5 @@ The script is currently unmaintained and needs TLC (as of November 8, 2016). [Co
 [1]: https://github.com/j9t/social-widget-wrapper/blob/master/social.html
 [2]: https://github.com/j9t/social-widget-wrapper/blob/master/social.combined.js
 [3]: https://www.addthis.com/
-[4]: https://coderesponsibly.org/
+[4]: https://mirrors.meiert.org/coderesponsibly.org/
 [5]: https://github.com/j9t/social-widget-wrapper/issues/new
