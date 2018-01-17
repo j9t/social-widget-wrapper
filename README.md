@@ -11,4 +11,4 @@ You can see a live example of the script in action on [Code Responsibly](https:/
 
 ---
 
-The script is currently unmaintained and needs TLC (as of November 8, 2016). [Contributions welcome.](https://github.com/j9t/social-widget-wrapper/issues/new)
+The script is currently unmaintained and needs TLC (as of January 17, 2018). [Contributions welcome.](https://github.com/j9t/social-widget-wrapper/issues/new)
